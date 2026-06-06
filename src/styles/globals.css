@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navyBg text-textPrimary font-sans overflow-x-hidden selection:bg-goldPrimary selection:text-navyBg;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-wide text-textPrimary;
+  }
+}
+
+/* Viewport & Global Overflow Fixes */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+* {
+  min-width: 0; /* prevents flex/grid children from overflowing */
+}
+
+img, canvas, video {
+  max-width: 100%;
+}
+
+/* Formal Navy & Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #07101f;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8a96e;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e2c98a;
+}
+
+/* Keyframes */
+@keyframes scrollDrop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  40% {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+  60% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Utility Animations */
+.animate-scroll-drop {
+  animation: scrollDrop 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.15), transparent);
+  background-size: 200% 100%;
+}
+
+.group:hover .shimmer-trigger {
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Custom Glassmorphism panels */
+.glass-panel-formal {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 169, 110, 0.2);
+}
+
+.glass-card-formal {
+  background: rgba(17, 34, 64, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(200, 169, 110, 0.20);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-formal:hover {
+  border-color: rgba(226, 201, 138, 0.6);
+  box-shadow: 0 12px 30px -10px rgba(7, 16, 31, 0.9), 0 0 15px rgba(200, 169, 110, 0.05);
+}
+
+/* Hover Translate for Hover-Capable Devices Only */
+@media (hover: hover) {
+  .glass-card-formal:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Formal Label Tag Stylings */
+.formal-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  font-weight: 500;
+}
+
+/* iOS Specific Fixes */
+/* Fix iOS 100vh bug */
+.hero-section {
+  min-height: 100dvh;
+}
+
+/* Fix iOS overscroll bounce showing white */
+html {
+  background-color: #07101f;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix iOS tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix iOS input zoom */
+input, select, textarea {
+  font-size: 16px !important;
+}
