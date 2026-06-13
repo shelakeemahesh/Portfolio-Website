@@ -37,8 +37,8 @@ export const projects: Project[] = [
       "Seamless frontend-backend integration for smooth user experience",
     ],
     stack: ["React.js", "Spring Boot", "MongoDB", "REST APIs", "Java"],
-    liveUrl: "YOUR_ECOMMERCE_LIVE_URL",
-    githubUrl: "YOUR_ECOMMERCE_GITHUB_URL",
+    liveUrl: "https://swift-cart-frontend-gold.vercel.app",
+    githubUrl: "https://github.com/shelakeemahesh/SwiftCart-Frontend",
   },
   {
     id: "03",
