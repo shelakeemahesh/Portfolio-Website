@@ -14,7 +14,7 @@ export const timeline: TimelineEntry[] = [
     organization: "Sinhgad College of Engineering (SPPU)",
     location: "Pune, Maharashtra",
     description:
-      "Pursuing B.E. in Computer Engineering with CGPA 7.08/10. Specializing in enterprise full-stack development, distributed systems, Spring Boot microservices, Redis caching, and Kafka streaming architectures.",
+      "Completed B.E. in Computer Engineering with CGPA 7.08/10. Specializing in enterprise full-stack development, distributed systems, Spring Boot microservices, Redis caching, and Kafka streaming architectures.",
     type: "education",
   },
   {
