@@ -4,8 +4,9 @@ import { personal } from '../data/personal';
 
 const About: React.FC = () => {
   const techChips = [
-    'Spring Boot', 'React.js', 'Java', 'JavaScript ES6+',
-    'MySQL', 'PostgreSQL', 'MongoDB', 'JWT', 'Spring Security', 'Tailwind CSS'
+    'Spring Boot 3', 'React 18', 'Java 21', 'TypeScript',
+    'PostgreSQL', 'MySQL', 'Redis', 'Kafka', 'Docker',
+    'Spring Security 6', 'JWT / OAuth 2.0', 'Tailwind CSS', 'Vercel'
   ];
 
   return (
@@ -39,15 +40,15 @@ const About: React.FC = () => {
             <div className="text-textMuted font-sans text-sm md:text-base font-light leading-relaxed space-y-5 mb-10">
               <p>
                 I am a final-year Computer Engineering student at Sinhgad College of
-                Engineering, Pune (SPPU), graduating in 2026 with a CGPA of 6.91/10.
-                My expertise spans Spring Boot microservices, React.js with JavaScript
-                ES6+, and cloud deployment on Render and Railway.
+                Engineering, Pune (SPPU), graduating in 2026 with a CGPA of 7.08/10.
+                My expertise spans enterprise Spring Boot microservices, React.js with TypeScript &
+                JavaScript ES6+, Redis caching, Kafka event streaming, and cloud deployment.
               </p>
               <p>
                 I enjoy building systems that are both performant and maintainable —
-                from JWT-secured REST APIs with Spring Security to dynamic React
-                frontends with real-time data. I completed an internship at CUBAN IT
-                PVT LTD as a Java Developer Intern in Dec 2024–Jan 2025.
+                from JWT & OAuth 2.0 secured REST APIs with Spring Security 6 to dynamic React
+                frontends with real-time data. I have worked as a Java Developer Intern at
+                Amdox Technologies (Apr 2026–July 2026) and CUBAN IT PVT LTD (Dec 2024–Feb 2025).
               </p>
             </div>
 
@@ -131,8 +132,8 @@ const About: React.FC = () => {
                     <span className="font-semibold text-textPrimary block truncate" title="NexusHR">
                       NexusHR
                     </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="HR Management Platform">
-                      HR Management Platform
+                    <span className="text-[10px] text-textMuted block truncate" title="HR Management Suite">
+                      HR Management Suite
                     </span>
                   </div>
                   <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
@@ -143,11 +144,11 @@ const About: React.FC = () => {
                 {/* Product 2 */}
                 <div className="flex items-center justify-between py-2 border-b border-goldPrimary/5 min-w-0 w-full gap-2">
                   <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="E-Commerce App">
-                      E-Commerce App
+                    <span className="font-semibold text-textPrimary block truncate" title="SwiftCart">
+                      SwiftCart
                     </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="Full-Stack Shopping Platform">
-                      Full-Stack Shopping Platform
+                    <span className="text-[10px] text-textMuted block truncate" title="Full-Stack E-Commerce Platform">
+                      Full-Stack E-Commerce Platform
                     </span>
                   </div>
                   <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
@@ -156,13 +157,28 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Product 3 */}
+                <div className="flex items-center justify-between py-2 border-b border-goldPrimary/5 min-w-0 w-full gap-2">
+                  <div className="flex flex-col gap-0.5 min-w-0 flex-1">
+                    <span className="font-semibold text-textPrimary block truncate" title="CredoWallet">
+                      CredoWallet
+                    </span>
+                    <span className="text-[10px] text-textMuted block truncate" title="Personal Finance Platform">
+                      Personal Finance Platform
+                    </span>
+                  </div>
+                  <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
+                    Live
+                  </span>
+                </div>
+
+                {/* Product 4 */}
                 <div className="flex items-center justify-between py-2 min-w-0 w-full gap-2">
                   <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="Money Manager">
-                      Money Manager
+                    <span className="font-semibold text-textPrimary block truncate" title="ForexFlow">
+                      ForexFlow
                     </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="Personal Finance Tracker">
-                      Personal Finance Tracker
+                    <span className="text-[10px] text-textMuted block truncate" title="Real-Time Currency Exchange Platform">
+                      Real-Time Currency Exchange Platform
                     </span>
                   </div>
                   <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">

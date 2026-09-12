@@ -5,7 +5,7 @@ export const personal = {
   role: "Java Full Stack Developer",
   tagline: "Building secure, scalable full-stack applications with Spring Boot & React.",
   summary:
-    "Java Full Stack Developer with strong backend expertise in Spring Boot, RESTful APIs, and database design. Experienced in building secure, scalable applications using JWT-based authentication. Seeking an entry-level role to contribute to high-performance web systems.",
+    "Java Full Stack Developer with hands-on experience building secure, scalable web applications using Java 21, Spring Boot 3, React, MySQL, and PostgreSQL. Skilled in REST API architecture, Spring Security 6, JWT/OAuth 2.0, JPA/Hibernate, and responsive UI development. Strong understanding of OOP principles, system design, and full-stack enterprise workflows.",
   email: "shelakemahesh024@gmail.com",
   phone: "+91 9503072201",
   location: "Pune, Maharashtra, India",
@@ -13,15 +13,15 @@ export const personal = {
   github: "https://github.com/shelakeemahesh",
   resumeUrl: "/Mahesh_Shelake_CV.pdf",
   college: "Sinhgad College of Engineering (SPPU)",
-  cgpa: "6.91 / 10",
+  cgpa: "7.08 / 10",
   graduationYear: "2026",
   certifications: [
-    { title: "Java Certificate", platform: "HackerRank", url: "YOUR_JAVA_CERT_URL" },
-    { title: "Frontend Developer Certificate", platform: "HackerRank", url: "YOUR_FE_CERT_URL" },
+    { title: "Java Certificate", platform: "N Infinity Solutions", url: "https://www.linkedin.com/in/shelakeemahesh/" },
+    { title: "Frontend Developer Certificate", platform: "HackerRank", url: "https://www.hackerrank.com/certificates" },
   ],
   stats: [
-    { value: "4+", label: "Projects" },
+    { value: "5+", label: "Projects" },
     { value: "1",  label: "Internship" },
-    { value: "6.91", label: "CGPA" },
+    { value: "7.08", label: "CGPA" },
   ],
 };

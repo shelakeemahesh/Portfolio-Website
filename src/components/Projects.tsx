@@ -76,13 +76,25 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           {project.title}
         </h3>
 
-        {/* Description (0.78rem text size, 1.65 line-height, no fixed pixel widths) */}
+        {/* Description */}
         <p 
-          className="text-textMuted font-sans font-light mb-6 max-w-full md:max-w-sm"
+          className="text-textMuted font-sans font-light mb-4 max-w-full"
           style={{ fontSize: '0.78rem', lineHeight: '1.65' }}
         >
           {project.description}
         </p>
+
+        {/* Key Highlights / Bullets */}
+        {project.bullets && project.bullets.length > 0 && (
+          <ul className="space-y-1.5 mb-6 text-textMuted font-sans font-light">
+            {project.bullets.map((bullet, idx) => (
+              <li key={idx} className="flex items-start gap-2 text-[0.73rem] leading-relaxed">
+                <span className="text-goldPrimary text-[10px] mt-0.5 shrink-0 select-none">▹</span>
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Stack (flex-wrap and gap-1) */}
         <div className="flex flex-wrap gap-1 mb-8">
