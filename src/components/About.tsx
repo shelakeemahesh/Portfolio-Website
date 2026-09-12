@@ -39,16 +39,16 @@ const About: React.FC = () => {
             {/* Biography details */}
             <div className="text-textMuted font-sans text-sm md:text-base font-light leading-relaxed space-y-5 mb-10">
               <p>
-                I am a final-year Computer Engineering student at Sinhgad College of
-                Engineering, Pune (SPPU), graduating in 2026 with a CGPA of 7.08/10.
+                I am a Computer Engineering graduate from Sinhgad College of
+                Engineering, Pune (SPPU), class of 2026 with a CGPA of 7.08/10.
                 My expertise spans enterprise Spring Boot microservices, React.js with TypeScript &
                 JavaScript ES6+, Redis caching, Kafka event streaming, and cloud deployment.
               </p>
               <p>
                 I enjoy building systems that are both performant and maintainable —
                 from JWT & OAuth 2.0 secured REST APIs with Spring Security 6 to dynamic React
-                frontends with real-time data. I have worked as a Java Developer Intern at
-                Amdox Technologies (Apr 2026–July 2026) and CUBAN IT PVT LTD (Dec 2024–Feb 2025).
+                frontends with real-time data. I completed an internship at Amdox Technologies
+                as a Java Developer Intern (Apr 2026–Jul 2026).
               </p>
             </div>
 
