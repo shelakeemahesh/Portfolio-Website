@@ -12,6 +12,7 @@ export const personal = {
   linkedin: "https://www.linkedin.com/in/shelakeemahesh/",
   github: "https://github.com/shelakeemahesh",
   resumeUrl: "/Mahesh_Shelake_CV.pdf",
+  avatarUrl: "/profile.png",
   college: "Sinhgad College of Engineering (SPPU)",
   cgpa: "7.08 / 10",
   graduationYear: "2026",

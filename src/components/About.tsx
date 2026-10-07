@@ -35,7 +35,26 @@ const About: React.FC = () => {
             >
               Crafting <span className="text-goldPrimary">Digital Experiences</span>
             </h2>
-            <div className="h-[1px] w-14 bg-gradient-to-r from-goldPrimary to-transparent mt-4 mb-8"></div>
+            <div className="h-[1px] w-14 bg-gradient-to-r from-goldPrimary to-transparent mt-4 mb-6"></div>
+
+            {/* Author Profile Quick Identity */}
+            <div className="flex items-center gap-3.5 mb-8 p-3 rounded-xl border border-goldPrimary/20 bg-goldPrimary/5 backdrop-blur-md w-fit select-none">
+              <div className="w-12 h-12 rounded-full overflow-hidden border border-goldPrimary/50 shadow-goldGlow shrink-0">
+                <img
+                  src={personal.avatarUrl}
+                  alt={personal.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading font-medium text-textPrimary text-base tracking-wide leading-tight">
+                  {personal.name}
+                </span>
+                <span className="text-[11px] text-goldPrimary font-sans">
+                  {personal.college} &bull; CGPA {personal.cgpa.split(' ')[0]}
+                </span>
+              </div>
+            </div>
 
             {/* Biography details */}
             <div className="text-textMuted font-sans text-sm md:text-base font-light leading-relaxed space-y-5 mb-10">

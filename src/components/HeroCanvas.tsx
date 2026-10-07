@@ -219,7 +219,7 @@ const Scene: React.FC = () => {
 
 const HeroCanvas: React.FC = () => {
   return (
-    <div className="w-full h-[280px] md:h-full md:absolute md:inset-0 z-0 bg-transparent pointer-events-none mx-auto">
+    <div className="w-full h-full absolute inset-0 z-0 bg-transparent pointer-events-none mx-auto">
       <Canvas
         camera={{ position: [0, 0, isMobile ? 11 : 8], fov: 50 }}
         gl={{ antialias: true, alpha: true }}

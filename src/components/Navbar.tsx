@@ -72,14 +72,21 @@ const Navbar: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-12 h-full flex items-center justify-between">
           
-          {/* Monogram Logo - Cormorant Garamond, Gold with Responsive Clamp */}
+          {/* Monogram / Avatar Logo */}
           <a
             href="#/"
             onClick={(e) => handleLinkClick(e, 'hero')}
-            className="font-heading font-light tracking-[0.12em] text-goldPrimary hover:text-goldLight transition-colors duration-300 select-none z-50"
-            style={{ fontSize: 'clamp(1.1rem, 4vw, 1.4rem)' }}
+            className="flex items-center gap-2.5 font-heading font-light tracking-[0.12em] text-goldPrimary hover:text-goldLight transition-colors duration-300 select-none z-50 group"
+            style={{ fontSize: 'clamp(1.05rem, 3.8vw, 1.35rem)' }}
           >
-            MAHESH SHELAKE
+            <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-goldPrimary/40 group-hover:border-goldPrimary transition-all duration-300 shadow-[0_0_10px_rgba(200,169,110,0.25)] shrink-0">
+              <img
+                src={personal.avatarUrl}
+                alt={personal.name}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <span>MAHESH SHELAKE</span>
           </a>
 
           {/* Desktop Links — hidden on mobile: */}
@@ -146,6 +153,25 @@ const Navbar: React.FC = () => {
               backgroundColor: '#07101f',
             }}
           >
+            {/* Mobile Drawer Profile Header */}
+            <div className="flex items-center gap-3 p-3 rounded-xl border border-goldPrimary/20 bg-goldPrimary/5 mb-5 select-none">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-goldPrimary/40 shadow-goldGlow shrink-0">
+                <img
+                  src={personal.avatarUrl}
+                  alt={personal.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="font-heading font-semibold text-textPrimary text-sm tracking-wide">
+                  {personal.name}
+                </span>
+                <span className="text-[10px] text-goldPrimary font-sans uppercase tracking-widest font-medium">
+                  {personal.role}
+                </span>
+              </div>
+            </div>
+
             <nav className="flex flex-col w-full space-y-2">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.targetId;
