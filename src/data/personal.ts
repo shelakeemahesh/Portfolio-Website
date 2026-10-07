@@ -20,7 +20,7 @@ export const personal = {
     { title: "Frontend Developer Certificate", platform: "HackerRank", url: "https://www.hackerrank.com/certificates" },
   ],
   stats: [
-    { value: "5+", label: "Projects" },
+    { value: "6+", label: "Projects" },
     { value: "1",  label: "Internship" },
     { value: "7.08", label: "CGPA" },
   ],

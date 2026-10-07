@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personal } from '../data/personal';
+import { projects } from '../data/projects';
 
 const About: React.FC = () => {
   const techChips = [
@@ -124,68 +125,27 @@ const About: React.FC = () => {
                 Current Projects Status
               </h3>
 
-              <div className="space-y-4 text-xs font-sans w-full min-w-0">
-                
-                {/* Product 1 */}
-                <div className="flex items-center justify-between py-2 border-b border-goldPrimary/5 min-w-0 w-full gap-2">
-                  <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="NexusHR">
-                      NexusHR
-                    </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="HR Management Suite">
-                      HR Management Suite
-                    </span>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
-                    Live
-                  </span>
-                </div>
-
-                {/* Product 2 */}
-                <div className="flex items-center justify-between py-2 border-b border-goldPrimary/5 min-w-0 w-full gap-2">
-                  <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="SwiftCart">
-                      SwiftCart
-                    </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="Full-Stack E-Commerce Platform">
-                      Full-Stack E-Commerce Platform
+              <div className="space-y-3 text-xs font-sans w-full min-w-0">
+                {projects.map((proj, idx) => (
+                  <div
+                    key={proj.id}
+                    className={`flex items-center justify-between py-1.5 ${
+                      idx < projects.length - 1 ? 'border-b border-goldPrimary/5' : ''
+                    } min-w-0 w-full gap-2`}
+                  >
+                    <div className="flex flex-col gap-0.5 min-w-0 flex-1">
+                      <span className="font-semibold text-textPrimary block truncate" title={proj.title}>
+                        {proj.title}
+                      </span>
+                      <span className="text-[10px] text-textMuted block truncate" title={proj.subtitle}>
+                        {proj.subtitle}
+                      </span>
+                    </div>
+                    <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
+                      Live
                     </span>
                   </div>
-                  <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
-                    Live
-                  </span>
-                </div>
-
-                {/* Product 3 */}
-                <div className="flex items-center justify-between py-2 border-b border-goldPrimary/5 min-w-0 w-full gap-2">
-                  <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="CredoWallet">
-                      CredoWallet
-                    </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="Personal Finance Platform">
-                      Personal Finance Platform
-                    </span>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
-                    Live
-                  </span>
-                </div>
-
-                {/* Product 4 */}
-                <div className="flex items-center justify-between py-2 min-w-0 w-full gap-2">
-                  <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <span className="font-semibold text-textPrimary block truncate" title="ForexFlow">
-                      ForexFlow
-                    </span>
-                    <span className="text-[10px] text-textMuted block truncate" title="Real-Time Currency Exchange Platform">
-                      Real-Time Currency Exchange Platform
-                    </span>
-                  </div>
-                  <span className="px-2 py-0.5 rounded-[3px] border border-goldPrimary/30 bg-goldPrimary/5 text-[9px] font-semibold tracking-wider text-goldPrimary uppercase select-none shrink-0">
-                    Live
-                  </span>
-                </div>
-
+                ))}
               </div>
             </div>
 

@@ -72,17 +72,32 @@ export const projects: Project[] = [
   },
   {
     id: "05",
-    title: "Alpha Urban Solutions",
-    subtitle: "Smart Society Management Platform",
+    title: "AI Exam Proctor",
+    subtitle: "AI Proctoring & Evaluation Suite",
     description:
-      "Smart residential community operations portal for complaint escalation, visitor entry approvals, automated maintenance dues billing, and community broadcast notices.",
+      "An intelligent, computer vision-powered exam proctoring and automated evaluation platform that monitors candidates in real time during online examinations using MediaPipe, OpenCV, audio analysis, and behavioral tracking.",
     bullets: [
-      "Implemented resident, admin, and service provider modules with secure role-based access control (RBAC)",
-      "Developed complaint, maintenance, and visitor management workflows using RESTful APIs and Spring Boot",
-      "Built a responsive dashboard for notice board broadcasts, service request tracking, and community directory",
+      "Tracks gaze orientation, facial landmarks, and head pose via MediaPipe Face Mesh to flag visual distractions and multi-person presence",
+      "Monitors ambient audio anomalies with PyAudio and captures active screen sessions with MSS to detect unauthorized application switching",
+      "Generates comprehensive post-exam PDF audit reports featuring violation timelines, incident charts, and automated evaluation metrics",
     ],
-    stack: ["React.js", "Spring Boot", "PostgreSQL", "JWT", "Spring Security", "Render"],
-    liveUrl: "https://github.com/shelakeemahesh",
-    githubUrl: "https://github.com/shelakeemahesh",
+    stack: ["Python", "OpenCV", "MediaPipe", "PyAudio", "Selenium", "MSS", "FFmpeg", "Matplotlib"],
+    liveUrl: "https://github.com/shelakeemahesh/AI-Based-Exam-Proctoring-and-Evaluation-System",
+    githubUrl: "https://github.com/shelakeemahesh/AI-Based-Exam-Proctoring-and-Evaluation-System",
+  },
+  {
+    id: "06",
+    title: "DevDocs Hub",
+    subtitle: "Developer Roadmap & Docs Platform",
+    description:
+      "Production-grade technical documentation and system design learning hub covering the full engineering lifecycle: Frontend architectures, Backend frameworks, Relational Databases, DevOps pipelines, and System Design.",
+    bullets: [
+      "Built with Next.js 14, Fumadocs MDX engine, and Tailwind CSS for instant full-text search and interactive code syntax highlighting",
+      "Engineered 8 modular technical chapters spanning 95+ deep-dive lessons across React, Spring Boot, Docker, and relational databases",
+      "Integrated interactive system architecture diagrams, dark/light theme switching, and responsive navigation for seamless developer onboarding",
+    ],
+    stack: ["Next.js 14", "React", "TypeScript", "Fumadocs", "MDX", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://documentation-seven-omega.vercel.app",
+    githubUrl: "https://github.com/shelakeemahesh/Documentation",
   },
 ];
