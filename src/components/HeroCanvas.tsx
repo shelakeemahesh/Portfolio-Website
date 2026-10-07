@@ -4,27 +4,37 @@ import * as THREE from 'three';
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
+const createParticleGeometry = (count: number, radius: number) => {
+  const arr = new Float32Array(count * 3);
+  let seed = 42;
+  const rand = () => {
+    seed = (seed * 1664525 + 1013904223) % 4294967296;
+    return seed / 4294967296;
+  };
+  for (let i = 0; i < count; i++) {
+    const u = rand();
+    const theta = rand() * Math.PI * 2;
+    const phi = Math.acos(2 * rand() - 1);
+    const r = radius * Math.cbrt(u);
+
+    arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+    arr[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    arr[i * 3 + 2] = r * Math.cos(phi);
+  }
+
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+  return geom;
+};
+
 const ParticleField: React.FC = () => {
   const pointsRef = useRef<THREE.Points>(null);
   const count = isMobile ? 150 : 600; // Optimized count for smooth frame rates
 
   // Instantiate shared WebGL assets once
   const [pointsGeom, pointsMat] = useMemo(() => {
-    const arr = new Float32Array(count * 3);
     const radius = isMobile ? 6 : 9;
-    for (let i = 0; i < count; i++) {
-      const u = Math.random();
-      const theta = Math.random() * Math.PI * 2;
-      const phi = Math.acos(2 * Math.random() - 1);
-      const r = radius * Math.cbrt(u);
-
-      arr[i * 3] = r * Math.sin(phi) * Math.cos(theta);
-      arr[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
-      arr[i * 3 + 2] = r * Math.cos(phi);
-    }
-
-    const geom = new THREE.BufferGeometry();
-    geom.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+    const geom = createParticleGeometry(count, radius);
 
     const mat = new THREE.PointsMaterial({
       color: "#c8a96e",
